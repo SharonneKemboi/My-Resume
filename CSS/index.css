@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700|Lato:400,700&display=swap');
+
+:root {
+  box-sizing: border-box;
+  --light-gray: hsl(56, 32%, 91%);
+  --dark-gray: hsl(56, 20%, 74%);
+  --black: hsl(0, 0%, 17%);
+  --white: hsl(0, 0%, 100%);
+  --light-teal: hsl(171, 24%, 44%);
+
+  font-size: calc(0.5em + 1vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em;
+}
+
+@media (min-width: 55em) {
+  .wrapper {
+    width: 60%;
+    font-size: 0.7rem;
+  }
+}
+
+.field-container {
+  border: 2px solid var(--black);
+}
+
+@media (min-width: 45em) {
+  .field-container-skills {
+    border: none;
+  }
+}
+
+.field-container > h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.field-container > h2 > span {
+  background-color: var(--black);
+  color: var(--white);
+  display: inline;
+  border: 1px solid var(--black);
+  position: relative;
+  top: -0.7em;
+  padding: 0.2em;
+  text-transform: uppercase;
+}
+
+.period {
+  font-size: 2rem;
+}
+
+.progress-indicator {
+  height: 2px;
+}
+
+.progress-indicator[value] {
+  border: none;
+  background-color: var(--dark-gray);
+}
+
+.progress-indicator[value]::-webkit-progress-value {
+  background-color: var(--black);
+}
+
+.progress-indicator[value]::-moz-progress-bar {
+  background-color: var(--black);
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-name h1 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  color: var(--light-teal);
+  margin: 0;
+  font-size: 3em;
+}
+
+.profession {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.contact-info__details {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+}
+
+@media (min-width: 45em) {
+  .contact-info__details {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact-info__details > li {
+  text-decoration: underline;
+  padding: 0.5em 0;
+}
+
+@media (min-width: 45em) {
+  .contact-info__details > li {
+    padding: 0;
+  }
+}
+
+.main {
+  margin-top: 2em;
+}
+
+.main__inner > * + * {
+  margin-top: 2em;
+}
+
+.profile p {
+  margin: 0;
+  padding: 1em 1em 2em;
+}
+
+@media (min-width: 45em) {
+  .education__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    gap: 0.5em;
+  }
+}
+
+.school {
+  display: flex;
+  padding: 1em;
+}
+
+.study-years {
+  margin-right: 1em;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.year-gap {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.institution-name h3 {
+  margin: 0;
+}
+
+.institution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 45em) {
+  .work-skills {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    grid-template-rows: auto;
+    gap: 1em;
+  }
+}
+
+.work {
+  padding: 1em;
+}
+
+.work-title-name > h3 {
+  margin: 0;
+}
+
+.work-description {
+  margin-top: 1em;
+}
+
+.work-description p {
+  margin: 0;
+}
+
+.work-description > p + p {
+  padding-top: 1em;
+}
+
+.skills {
+  margin-top: 2em;
+}
+
+@media (min-width: 45em) {
+  .skills {
+    margin-top: 0;
+  }
+}
+
+.skills__inner {
+  padding: 1em;
+}
+
+.skill-type {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  color: rgb(3, 3, 3);
+}
+
+.skill-type > label {
+  font-weight: 700;
+}
+
+.progress-indicator{
+display: flex;
+position: absolute;
+}
+
